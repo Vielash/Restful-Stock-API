@@ -1,4 +1,4 @@
-package BackendStock.model;
+package src.main.Stockingho.BackendStock.model;
 
 public class Stock {
     private int stockID;
@@ -6,14 +6,16 @@ public class Stock {
     private String stockCode;
     private int stockDividendRate;
     private int stockDividendValuePerShare;
+    private double stockPrice;
 
 
-    public Stock(int stockID, String stockName, String stockCode, int stockDividendRate, int stockDividendValuePerShare) {
+    public Stock(int stockID, String stockName, String stockCode,double stockPrice, int stockDividendRate, int stockDividendValuePerShare) {
         this.stockCode = stockCode;
         this.stockName = stockName;
         this.stockID = stockID;
         this.stockDividendRate = stockDividendRate;
         this.stockDividendValuePerShare = stockDividendValuePerShare;
+        this.stockPrice = stockPrice;
     }
 
     public int getStockID() {
@@ -30,6 +32,9 @@ public class Stock {
     }
     public int getStockDividendValuePerShare() {
         return stockDividendValuePerShare;
+    }
+    public double getStockPrice() {
+        return stockPrice;
     }
 
 
@@ -48,4 +53,8 @@ public class Stock {
     public void setStockDividendValuePerShare(int stockDividendValuePerShare) {
         this.stockDividendValuePerShare = stockDividendValuePerShare;
     }
+    public void setStockPrice(double stockPrice) {
+        this.stockPrice = stockPrice;
+    }
+
 }

@@ -1,4 +1,4 @@
-package BackendStock.model;
+package src.main.Stockingho.BackendStock.model;
 
 public class User {
     private int userID;
@@ -38,5 +38,15 @@ public class User {
     }
     public void setUserSurname(String userSurname) {
         this.userSurname = userSurname;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID=" + userID +
+                ", userName='" + userName + '\'' +
+                ", userSurname='" + userSurname + '\'' +
+                ", userPassword='" + userPassword + '\'' +
+                '}';
     }
 }
